@@ -1,0 +1,60 @@
+{
+    "kind": "collectionType",
+    "collectionName": "message_de_conctacts",
+    "info": {
+        "singularName": "message-de-conctact",
+        "pluralName": "message-de-conctacts",
+        "displayName": "message de contact"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "fullname": {
+            "type": "string",
+            "required": true
+        },
+        "email": {
+            "type": "email",
+            "required": true
+        },
+        "projectType": {
+            "type": "enumeration",
+            "enum": [
+                "Sélectionnez_un_service",
+                "Design_Graphique",
+                "CV _&_Documents",
+                "Developpement_Web",
+                "Communication_Digitale"
+            ]
+        },
+        "estimatedBudget": {
+            "type": "enumeration",
+            "required": true,
+            "enum": [
+                "Moins_de_500E",
+                "Entre_500E_1000E",
+                "Entre_1000E_2500E",
+                "Plus_de_2500E"
+            ]
+        },
+        "desiredDeadline": {
+            "type": "enumeration",
+            "required": true,
+            "enum": [
+                "Urgent_moins_1_semaine",
+                "Normal_1_4_semaines",
+                "Flexible_1_3_mois"
+            ]
+        },
+        "message": {
+            "type": "text",
+            "required": true
+        },
+        "whatsappNumber": {
+            "type": "string",
+            "required": true
+        }
+    }
+}
