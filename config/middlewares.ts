@@ -13,8 +13,8 @@ module.exports = [
       origin: [
         'http://localhost:5173',
         'http://127.0.0.1:5173',
-        'https://axiom-elrealisator.vercel.app',
-        // Si vous avez un domaine personnalisé pour votre frontend Vercel, ajoutez-le ici aussi :
+        'https://axiom-elrealisator.vercel.app', // <-- C'est cette ligne qui est cruciale pour Vercel
+        // Si vous avez un domaine personnalisé pour votre frontend Vercel (ex: mon-site.com), ajoutez-le ici aussi :
         // 'https://votre-domaine-personnalise.com',
       ],
       // Les méthodes HTTP que votre frontend est autorisé à utiliser. Celles-ci sont standard.
@@ -25,11 +25,11 @@ module.exports = [
       keepHeaderOnError: true,
     },
   },
-  'strapi::poweredBy',  // Ajoute l'en-tête X-Powered-By
-  'strapi::logger',     // Gère le logging des requêtes
-  'strapi::query',      // Traite les paramètres de requête URL
-  'strapi::body',       // Parse le corps des requêtes (JSON, formulaires, etc.)
-  'strapi::session',    // Gère les sessions utilisateur
-  'strapi::favicon',    // Sert l'icône de favori
-  'strapi::public',     // Sert les fichiers statiques du dossier 'public'
+  'strapi::poweredBy',
+  'strapi::logger',
+  'strapi::query',
+  'strapi::body',
+  'strapi::session',
+  'strapi::favicon',
+  'strapi::public',
 ];
